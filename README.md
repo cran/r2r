@@ -5,27 +5,39 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/vgherard/r2r/workflows/R-CMD-check/badge.svg)](https://github.com/vgherard/r2r/actions)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/r2r)](https://CRAN.R-project.org/package=r2r)
+[![R-CMD-check](https://github.com/vgherard/r2r/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/vgherard/r2r/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/vgherard/r2r/branch/master/graph/badge.svg)](https://codecov.io/gh/vgherard/r2r?branch=master)
+coverage](https://codecov.io/gh/vgherard/r2r/graph/badge.svg)](https://app.codecov.io/gh/vgherard/r2r)
+[![R-universe
+status](https://vgherard.r-universe.dev/badges/r2r)](https://vgherard.r-universe.dev/)
+[![Website](https://img.shields.io/badge/Website-here-blue)](https://vgherard.github.io/r2r/)
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=%7Br2r%7D:%20R-Object%20to%20R-Object%20Hash%20Maps&url=https://vgherard.github.io/r2r&via=ValerioGherardi&hashtags=rstats,datastructures,hashtables)
 <!-- badges: end -->
 
 [`r2r`](https://vgherard.github.io/r2r/) provides a flexible
 implementation of hash tables in R, allowing for:
 
--   arbitrary R objects as keys and values,
--   arbitrary key comparison and hash functions,
--   customizable behaviour (throw or return a default value) on missing
-    key exceptions.
+- arbitrary R objects as keys and values,
+- arbitrary key comparison and hash functions,
+- customizable behaviour (throw or return a default value) on missing
+  key exceptions.
 
 ## Installation
 
-You can install the development version of `r2r` from
-[GitHub](https://github.com/vgherard/r2r) with:
+You can install the released version of `r2r` from
+[CRAN](https://CRAN.R-project.org/package=r2r) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("vgherard/r2r")
+install.packages("r2r")
+```
+
+and the development version from [my R-universe
+repository](https://vgherard.r-universe.dev/), with:
+
+``` r
+install.packages("r2r", repos = "https://vgherard.r-universe.dev")
 ```
 
 ## Usage
@@ -83,10 +95,10 @@ Vignette)
 
 Features supported by {r2r} and {hash}.
 
-|     Task      |      Comparison       |
-|:-------------:|:---------------------:|
-| Key insertion |    {r2r} \~ {hash}    |
-|   Key query   |   {r2r} &lt; {hash}   |
-| Key deletion  | {r2r} &lt;&lt; {hash} |
+|     Task      |    Comparison     |
+|:-------------:|:-----------------:|
+| Key insertion |  {r2r} ~ {hash}   |
+|   Key query   |  {r2r} \< {hash}  |
+| Key deletion  | {r2r} \<\< {hash} |
 
 Performances of {r2r} and {hash} for basic hash table operations.
